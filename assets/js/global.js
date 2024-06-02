@@ -1,5 +1,4 @@
-//let html5QrCode = null;
-alert(Html5Qrcode);
+let html5QrCode = null;
 function onScanSuccess(decodedText, decodedResult) {
   // handle the scanned code as you like, for example:
   console.log(`Code matched = ${decodedText}`, decodedResult);
@@ -14,7 +13,6 @@ function onScanFailure(error) {
 
 //detectar camaras disponibles 
 Html5Qrcode.getCameras().then(camaras => {
-  alert(camaras)
   if (camaras && camaras.length) {
     console.log('camaras :>> ', camaras);
     // encontro camaras disponibles
@@ -32,7 +30,7 @@ Html5Qrcode.getCameras().then(camaras => {
   console.log('error :>> ', error);
 });
 
-/* const seleccionoCamara = (elemento) => {
+const seleccionoCamara = (elemento) => {
 
   let camaraSeleccionada = elemento.value;
   console.log('camaraSeleccionada :>> ', camaraSeleccionada);
@@ -60,12 +58,12 @@ const detenerCamara = () => {
   }).catch((err) => {
     // Stop failed, handle it.
   });
-} */
+}
 
 
 /* lectura de imagenes */
 
-/* const html5QrCode2 = new Html5Qrcode("reader");
+const html5QrCode2 = new Html5Qrcode("reader");
 // File based scanning
 const fileinput = document.getElementById('qr-input-file');
 fileinput.addEventListener('change', e => {
@@ -86,7 +84,7 @@ fileinput.addEventListener('change', e => {
     console.log(`Error scanning file. Reason: ${err}`)
   });
 });
- */
+
 
 
 
